@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { GoogleGenAI } from "@google/genai";
 import { readFileSync } from "node:fs";
-import { assertValidOutput } from "./validate.js";
+import { assertValidOutput } from "../../src/validate.js";
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY
