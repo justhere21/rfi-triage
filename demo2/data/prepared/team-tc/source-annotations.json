@@ -1,0 +1,122 @@
+[
+  {
+    "source_id": "TC-01",
+    "source_pointer": "/0",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Structural Engineer",
+      "status": "Closed",
+      "conflict": "None"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-02",
+    "source_pointer": "/1",
+    "source_project_name": "Lee-Whedon Library",
+    "annotations": {
+      "assignee": "Lead Architect",
+      "status": "Closed",
+      "conflict": "Document Mismatch"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-03",
+    "source_pointer": "/2",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Electrical Engineer",
+      "status": "Closed",
+      "conflict": "Safety Rule Issue"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-04",
+    "source_pointer": "/3",
+    "source_project_name": "Lee-Whedon Library",
+    "annotations": {
+      "assignee": "Civil Engineer",
+      "status": "Rejected",
+      "conflict": "Unauthorize Change"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-05",
+    "source_pointer": "/4",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Design Coordinator",
+      "status": "Closed",
+      "conflict": "Space Clash"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-06",
+    "source_pointer": "/5",
+    "source_project_name": "Lee-Whedon Library",
+    "annotations": {
+      "assignee": "Lead Architect",
+      "status": "Closed",
+      "conflict": "None"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-07",
+    "source_pointer": "/6",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Electrical Engineer",
+      "status": "Closed",
+      "conflict": "None"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-08",
+    "source_pointer": "/7",
+    "source_project_name": "Lee-Whedon Library",
+    "annotations": {
+      "assignee": "Design Coordinator",
+      "status": "Closed",
+      "conflict": "Rule Compliance"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-09",
+    "source_pointer": "/8",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Civil Engineer",
+      "status": "In Review",
+      "conflict": "Height Mismatch"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  },
+  {
+    "source_id": "TC-10",
+    "source_pointer": "/9",
+    "source_project_name": "Willis ISD",
+    "annotations": {
+      "assignee": "Lead Architect",
+      "status": "Closed",
+      "conflict": "None"
+    },
+    "semantics_status": "unresolved",
+    "unmapped_fields": {}
+  }
+]

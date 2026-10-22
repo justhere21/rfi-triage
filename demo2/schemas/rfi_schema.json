@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RFISchema", "type": "object", "required": [
+    "rfi_id",
+    "project_id",
+    "title",
+    "submitted_by",
+    "date_submitted",
+    "description",
+    "linked_daily_report_ids"
+  ],
+  "properties": {"rfi_id": {"type": "string", "description": "Unique RFI identifier (e.g., PRFI-01)"
+    },
+    "project_id": {"type": "string", "description": "Project identifier or code"
+    },
+    "title": {"type": "string", "description": "RFI subject line or short summary"
+    },
+    "submitted_by": {"type": "string", "description": "Subcontractor or party initiating request"
+    },
+    "date_submitted": {"type": "string", "format": "date", "description": "ISO 8601 submission date (YYYY-MM-DD)"
+    },
+    "description": {"type": "string", "description": "Full request details and question text"
+    },
+    "spec_section": {"type": "string", "description": "Relevant specification or drawing sheet citation"
+    },
+    "linked_daily_report_ids": {
+      "type": "array",
+      "items": { "type": "string"
+      }, "description": "Array of associated daily report IDs"
+    }
+  }
+}

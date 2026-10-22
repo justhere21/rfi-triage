@@ -1,0 +1,107 @@
+[
+  {
+    "rfi": {
+      "rfi_id": "SYN2-RFI-001",
+      "project_id": "DEMO2-FICTIONAL",
+      "title": "Room A ceiling installation record",
+      "submitted_by": "Synthetic subcontractor",
+      "date_submitted": "2026-10-19",
+      "description": "Fictional fixture: by the end of 2026-10-19, the ceiling installation in Room A was complete. Please review this installation statement alongside the linked field report before a human decides the next workflow action.",
+      "linked_daily_report_ids": [
+        "SYN2-DR-001"
+      ]
+    },
+    "daily_reports": [
+      {
+        "report_id": "SYN2-DR-001",
+        "project_id": "DEMO2-FICTIONAL",
+        "report_date": "2026-10-19",
+        "reported_by": "Synthetic field observer",
+        "location": "Room A",
+        "work_description": "Fictional fixture: ceiling installation in Room A was complete by the end of 2026-10-19."
+      }
+    ]
+  },
+  {
+    "rfi": {
+      "rfi_id": "SYN2-RFI-002",
+      "project_id": "DEMO2-FICTIONAL",
+      "title": "Room B wall-panel installation record",
+      "submitted_by": "Synthetic subcontractor",
+      "date_submitted": "2026-10-19",
+      "description": "Fictional fixture: wall-panel installation in Room B had not begun by the end of 2026-10-19. Please review this installation statement alongside the linked field report before a human decides the next workflow action.",
+      "linked_daily_report_ids": [
+        "SYN2-DR-002"
+      ]
+    },
+    "daily_reports": [
+      {
+        "report_id": "SYN2-DR-002",
+        "project_id": "DEMO2-FICTIONAL",
+        "report_date": "2026-10-19",
+        "reported_by": "Synthetic field observer",
+        "location": "Room B",
+        "work_description": "Fictional fixture: wall-panel installation in Room B was complete by the end of 2026-10-19."
+      }
+    ]
+  },
+  {
+    "rfi": {
+      "rfi_id": "SYN2-RFI-003",
+      "project_id": "DEMO2-FICTIONAL",
+      "title": "Corridor C insulation crew record",
+      "submitted_by": "Synthetic subcontractor",
+      "date_submitted": "2026-10-19",
+      "description": "Fictional fixture: exactly 8 workers performed insulation installation in Corridor C during the full day shift on 2026-10-19. This count refers to all workers on that scope for that shift. Please review it alongside the linked field report before a human decides the next workflow action.",
+      "linked_daily_report_ids": [
+        "SYN2-DR-003"
+      ]
+    },
+    "daily_reports": [
+      {
+        "report_id": "SYN2-DR-003",
+        "project_id": "DEMO2-FICTIONAL",
+        "report_date": "2026-10-19",
+        "reported_by": "Synthetic field observer",
+        "location": "Corridor C",
+        "work_description": "Fictional fixture: exactly 4 workers performed insulation installation in Corridor C during the full day shift on 2026-10-19. This count refers to all workers on that scope for that shift.",
+        "labor_count": 4
+      }
+    ]
+  },
+  {
+    "rfi": {
+      "rfi_id": "SYN2-RFI-004",
+      "project_id": "DEMO2-FICTIONAL",
+      "title": "Area D pipe-material record",
+      "submitted_by": "Synthetic subcontractor",
+      "date_submitted": "2026-10-19",
+      "description": "Fictional fixture: the planned scope for Area D is copper pipe installation, and the installed work is to follow that copper scope. Please compare the plan stated here with the linked field report for the installation completed on 2026-10-19 before a human decides the next workflow action.",
+      "linked_daily_report_ids": [
+        "SYN2-DR-004"
+      ]
+    },
+    "daily_reports": [
+      {
+        "report_id": "SYN2-DR-004",
+        "project_id": "DEMO2-FICTIONAL",
+        "report_date": "2026-10-19",
+        "reported_by": "Synthetic field observer",
+        "location": "Area D",
+        "work_description": "Fictional fixture: PVC pipe was installed in Area D on 2026-10-19."
+      }
+    ]
+  },
+  {
+    "rfi": {
+      "rfi_id": "SYN2-RFI-005",
+      "project_id": "DEMO2-FICTIONAL",
+      "title": "Room E partition installation record",
+      "submitted_by": "Synthetic subcontractor",
+      "date_submitted": "2026-10-19",
+      "description": "Fictional fixture: please check the current installation condition of the partition in Room E as of the end of 2026-10-19 before a human decides the next workflow action. No daily report or other supporting installation evidence has been supplied for this request.",
+      "linked_daily_report_ids": []
+    },
+    "daily_reports": []
+  }
+]

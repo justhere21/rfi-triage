@@ -1,0 +1,62 @@
+{
+  "dataset_id": "demo2-synthetic-smoke-v1",
+  "provenance": "synthetic",
+  "source": {
+    "file": "demo2/data/source/synthetic-cases.json",
+    "sha256": "7a86222b88ed5bc07a58787087dd34e043e4d1feb8bd6294bc5c25c035e8646b"
+  },
+  "schemas": [
+    {
+      "file": "demo2/schemas/rfi_schema.json",
+      "sha256": "e8f9e5adf24dc96eef496f99f009613454c7f2466c62cc9aeeb45ff97f24c8c8"
+    },
+    {
+      "file": "demo2/schemas/daily_report_schema.json",
+      "sha256": "5b58de571cc5aa24198a65c669b2448369c2831b6f2e630a0ec90f490e985f43"
+    },
+    {
+      "file": "demo2/schemas/triage_output_schema.json",
+      "sha256": "6c0a68ccf1e2037352e64107f0351254149911e2108095b33a76caf3c738cfeb"
+    }
+  ],
+  "counts": {
+    "rfis": 5,
+    "daily_reports": 4,
+    "model_inputs": 5
+  },
+  "record_sources": [
+    {
+      "rfi_id": "SYN2-RFI-001",
+      "source_pointer": "/cases/0",
+      "daily_report_ids": [
+        "SYN2-DR-001"
+      ]
+    },
+    {
+      "rfi_id": "SYN2-RFI-002",
+      "source_pointer": "/cases/1",
+      "daily_report_ids": [
+        "SYN2-DR-002"
+      ]
+    },
+    {
+      "rfi_id": "SYN2-RFI-003",
+      "source_pointer": "/cases/2",
+      "daily_report_ids": [
+        "SYN2-DR-003"
+      ]
+    },
+    {
+      "rfi_id": "SYN2-RFI-004",
+      "source_pointer": "/cases/3",
+      "daily_report_ids": [
+        "SYN2-DR-004"
+      ]
+    },
+    {
+      "rfi_id": "SYN2-RFI-005",
+      "source_pointer": "/cases/4",
+      "daily_report_ids": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Demo 2 Daily Field Report",
+  "description": "Supplemental report contract for the fictional Demo 2 smoke-test fixtures. It does not establish an actual project record or approval history.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "project_id",
+    "report_date",
+    "reported_by",
+    "location",
+    "work_description"
+  ],
+  "properties": {
+    "report_id": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "project_id": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "report_date": { "type": "string", "format": "date" },
+    "reported_by": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "location": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "work_description": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "labor_count": { "type": "integer", "minimum": 0 }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "dataset_id": "demo2-synthetic-smoke-v1",
+  "label_status": "draft_for_team_review",
+  "reviewed_by": [],
+  "cases": [
+    {
+      "rfi_id": "SYN2-RFI-001",
+      "expected_conflict_types": [],
+      "requires_clarification": false,
+      "human_review_required": true,
+      "rationale": "Provisional fixture label: both fictional records say the same ceiling installation in Room A was complete by the end of 2026-10-19. The supplied comparison does not identify a conflict. This does not establish an approved status, current assignee or completed human review."
+    },
+    {
+      "rfi_id": "SYN2-RFI-002",
+      "expected_conflict_types": ["Schedule Mismatch"],
+      "requires_clarification": true,
+      "human_review_required": true,
+      "rationale": "Provisional fixture label: for the same location, work and end-of-day date, the RFI says installation had not begun while the report says installation was complete. A human must reconcile these contradictory installation statements before deciding the next action."
+    },
+    {
+      "rfi_id": "SYN2-RFI-003",
+      "expected_conflict_types": ["Labor Discrepancy"],
+      "requires_clarification": true,
+      "human_review_required": true,
+      "rationale": "Provisional fixture label: the RFI reports exactly 8 workers and the daily report records exactly 4 for the same complete day shift, scope, location and date. A human must resolve the differing counts; no cost or productivity conclusion follows from this fixture."
+    },
+    {
+      "rfi_id": "SYN2-RFI-004",
+      "expected_conflict_types": ["Scope Variance"],
+      "requires_clarification": true,
+      "human_review_required": true,
+      "rationale": "Provisional fixture label: the RFI states a copper-pipe scope for Area D while the report says PVC pipe was installed in that area. The fixture calls for human clarification of the material difference and does not establish a contractual violation or a technical resolution."
+    },
+    {
+      "rfi_id": "SYN2-RFI-005",
+      "expected_conflict_types": [],
+      "requires_clarification": true,
+      "human_review_required": true,
+      "rationale": "Provisional fixture label: no linked daily report or supporting installation evidence is supplied. An empty conflict list here means no specific discrepancy can be established from the available input, not that the request is verified or ready for approval. Missing context requires clarification and human review."
+    }
+  ]
+}

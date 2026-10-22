@@ -1,0 +1,25 @@
+{
+  "dataset_id": "demo2-synthetic-smoke-v1",
+  "provenance": "synthetic",
+  "valid": true,
+  "validation_scope": "Input structure, dates, IDs, source pairing, project boundaries, and reproducibility only.",
+  "counts": {
+    "rfis": 5,
+    "daily_reports": 4,
+    "model_inputs": 5
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "preserved_missing_context",
+      "rfi_id": "SYN2-RFI-005",
+      "message": "No daily report is linked. Schema validity does not establish completeness or approval readiness."
+    }
+  ],
+  "limitations": [
+    "All records are fictional smoke fixtures, separate from the public 17 records and Demo 1 primary 23 cases.",
+    "No answer key is read by the preparation or input-validation pipeline; labels require separate team review.",
+    "Current workflow state, routing history, and human approval events are not defined by the current RFI input schema.",
+    "No model, application, endpoint, approval enforcement, accuracy, or real project time saving has been tested."
+  ]
+}

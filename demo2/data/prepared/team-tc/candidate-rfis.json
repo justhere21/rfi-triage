@@ -1,0 +1,92 @@
+[
+  {
+    "source_id": "TC-01",
+    "source_pointer": "/0",
+    "rfi": {
+      "rfi_id": "TC-01",
+      "title": "Roof Steel Beams",
+      "description": "Check if we need more steel under the roof unit."
+    }
+  },
+  {
+    "source_id": "TC-02",
+    "source_pointer": "/1",
+    "rfi": {
+      "rfi_id": "TC-02",
+      "title": "Window Glass Type",
+      "description": "Fix the wrong glass type listed in th plans."
+    }
+  },
+  {
+    "source_id": "TC-03",
+    "source_pointer": "/2",
+    "rfi": {
+      "rfi_id": "TC-03",
+      "title": "Fire Alarm Box",
+      "description": "Move the fire alarm box to a safer spot."
+    }
+  },
+  {
+    "source_id": "TC-04",
+    "source_pointer": "/3",
+    "rfi": {
+      "rfi_id": "TC-04",
+      "title": "Drain Pipe Swap",
+      "description": "Builder asked to change pipe material due to delays"
+    }
+  },
+  {
+    "source_id": "TC-05",
+    "source_pointer": "/4",
+    "rfi": {
+      "rfi_id": "TC-05",
+      "title": "Ceiling Pipe Clash",
+      "description": "Pipes are too low, so the ceilling must be lowered."
+    }
+  },
+  {
+    "source_id": "TC-06",
+    "source_pointer": "/5",
+    "rfi": {
+      "rfi_id": "TC-06",
+      "title": "Brick Glue Color",
+      "description": "Check and approve the color sample for brick."
+    }
+  },
+  {
+    "source_id": "TC-07",
+    "source_pointer": "/6",
+    "rfi": {
+      "rfi_id": "TC-07",
+      "title": "Emergency Lights",
+      "description": "Make sure emergency lights connect to backup power."
+    }
+  },
+  {
+    "source_id": "TC-08",
+    "source_pointer": "/7",
+    "rfi": {
+      "rfi_id": "TC-08",
+      "title": "Bathroom Wall Bars",
+      "description": "Check wall support rules for bathroom grab bars."
+    }
+  },
+  {
+    "source_id": "TC-09",
+    "source_pointer": "/8",
+    "rfi": {
+      "rfi_id": "TC-09",
+      "title": "Rain Drain Height",
+      "description": "Fix height mistakes in the rain drain plan."
+    }
+  },
+  {
+    "source_id": "TC-10",
+    "source_pointer": "/9",
+    "rfi": {
+      "rfi_id": "TC-10",
+      "title": "Wall Sound Panels",
+      "description": "Check wall strength for hanging sound panels."
+    }
+  }
+]

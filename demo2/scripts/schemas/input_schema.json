@@ -1,0 +1,37 @@
+{
+  "title": "Prepared RFI data input",
+  "description": "Preparation-only validation contract for team data fields. This schema supports scripts and does not define agent prompts, runtime behavior, or model outputs.",
+  "type": "object",
+  "required": [
+    "item_id",
+    "item_type",
+    "provenance",
+    "submitted_date",
+    "submitted_by",
+    "discipline",
+    "location",
+    "question_text",
+    "drawing_refs",
+    "spec_refs",
+    "attachments",
+    "related_item_ids"
+  ],
+  "properties": {
+    "item_id": { "type": "string" },
+    "item_type": { "type": "string", "enum": ["rfi", "email", "minutes"] },
+    "provenance": { "type": "string", "enum": ["synthetic", "observed_public", "partner"] },
+    "submitted_date": { "type": "string", "format": "date" },
+    "submitted_by": { "type": "string" },
+    "discipline": { "type": "string" },
+    "location": { "type": "string" },
+    "question_text": { "type": "string" },
+    "drawing_refs": { "type": "array", "items": { "type": "string" } },
+    "spec_refs": { "type": "array", "items": { "type": "string" } },
+    "attachments": { "type": "array", "items": { "type": "string" } },
+    "related_item_ids": { "type": "array", "items": { "type": "string" } },
+    "current_drawing_version": {
+      "type": "string",
+      "description": "Optional current drawing version retained from source data for preparation and review."
+    }
+  }
+}

@@ -1,0 +1,1327 @@
+{
+  "report_success": true,
+  "import_ready": false,
+  "syntax": {
+    "valid_json": true,
+    "top_level": "nonempty_array",
+    "records_are_objects": true
+  },
+  "summary": {
+    "source_records": 10,
+    "blocked_records": 10,
+    "ready_inputs": 0,
+    "original_status_counts": {
+      "Closed": 8,
+      "Rejected": 1,
+      "In Review": 1
+    }
+  },
+  "records": [
+    {
+      "source_id": "TC-01",
+      "source_pointer": "/0",
+      "rfi_id": "TC-01",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Structural Engineer",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "None",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-02",
+      "source_pointer": "/1",
+      "rfi_id": "TC-02",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Lead Architect",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Document Mismatch",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-03",
+      "source_pointer": "/2",
+      "rfi_id": "TC-03",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Electrical Engineer",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Safety Rule Issue",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-04",
+      "source_pointer": "/3",
+      "rfi_id": "TC-04",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Civil Engineer",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Unauthorize Change",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-05",
+      "source_pointer": "/4",
+      "rfi_id": "TC-05",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Design Coordinator",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Space Clash",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-06",
+      "source_pointer": "/5",
+      "rfi_id": "TC-06",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Lead Architect",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "None",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-07",
+      "source_pointer": "/6",
+      "rfi_id": "TC-07",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Electrical Engineer",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "None",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-08",
+      "source_pointer": "/7",
+      "rfi_id": "TC-08",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Design Coordinator",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Rule Compliance",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-09",
+      "source_pointer": "/8",
+      "rfi_id": "TC-09",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Civil Engineer",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "In Review",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "Height Mismatch",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    },
+    {
+      "source_id": "TC-10",
+      "source_pointer": "/9",
+      "rfi_id": "TC-10",
+      "mappings": [
+        {
+          "source_field": "id",
+          "target_field": "rfi_id",
+          "method": "alias"
+        },
+        {
+          "source_field": "topic",
+          "target_field": "title",
+          "method": "alias"
+        },
+        {
+          "source_field": "description",
+          "target_field": "description",
+          "method": "explicit"
+        }
+      ],
+      "missing_required_fields": [
+        "project_id",
+        "submitted_by",
+        "date_submitted",
+        "linked_daily_report_ids"
+      ],
+      "schema_errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "project_id"
+          },
+          "message": "must have required property 'project_id'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "submitted_by"
+          },
+          "message": "must have required property 'submitted_by'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "date_submitted"
+          },
+          "message": "must have required property 'date_submitted'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "linked_daily_report_ids"
+          },
+          "message": "must have required property 'linked_daily_report_ids'"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing_required_fields",
+          "fields": [
+            "project_id",
+            "submitted_by",
+            "date_submitted",
+            "linked_daily_report_ids"
+          ]
+        },
+        {
+          "code": "rfi_schema",
+          "message": "The partial candidate does not satisfy the current RFI schema."
+        },
+        {
+          "code": "annotation_semantics_unresolved",
+          "fields": [
+            "assignee",
+            "status",
+            "conflict"
+          ],
+          "message": "Clarify whether these values are initial state, expected answers, or display-only notes before model use."
+        },
+        {
+          "code": "missing_daily_reports",
+          "message": "An explicit daily_reports array is required; absent context is not replaced with an empty array."
+        }
+      ],
+      "unsupported_vocab": [
+        {
+          "field": "assignee",
+          "value": "Lead Architect",
+          "allowed_values": [
+            "Subcontractor",
+            "General Contractor",
+            "Architect",
+            "Engineer",
+            "Owner"
+          ]
+        },
+        {
+          "field": "status",
+          "value": "Closed",
+          "allowed_values": [
+            "Draft",
+            "Pending Review",
+            "Conflict Flagged",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "field": "conflict",
+          "value": "None",
+          "allowed_values": [
+            "Labor Discrepancy",
+            "Schedule Mismatch",
+            "Scope Variance",
+            "Cost Impact"
+          ]
+        }
+      ],
+      "input_errors": [],
+      "input_warnings": [],
+      "ready_for_model_input": false
+    }
+  ],
+  "limitations": [
+    "A successful compatibility report is not a successful model-input import or an evaluation result.",
+    "The source filename says synthetic; record origin and annotation meanings require team confirmation and are not inferred from real project names.",
+    "Project names, dates, submitters, daily-report evidence, workflow state and approval history are never invented or inferred.",
+    "Source annotations and unmapped fields remain outside candidate RFIs and ready model inputs; they are not finalized answer labels.",
+    "Ready means structurally usable input only, not verified completeness, correct routing, human approval, model accuracy or deployment readiness."
+  ]
+}

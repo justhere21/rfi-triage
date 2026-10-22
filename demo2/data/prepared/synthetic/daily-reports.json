@@ -1,0 +1,35 @@
+[
+  {
+    "report_id": "SYN2-DR-001",
+    "project_id": "DEMO2-FICTIONAL",
+    "report_date": "2026-10-19",
+    "reported_by": "Synthetic field observer",
+    "location": "Room A",
+    "work_description": "Fictional fixture: ceiling installation in Room A was complete by the end of 2026-10-19."
+  },
+  {
+    "report_id": "SYN2-DR-002",
+    "project_id": "DEMO2-FICTIONAL",
+    "report_date": "2026-10-19",
+    "reported_by": "Synthetic field observer",
+    "location": "Room B",
+    "work_description": "Fictional fixture: wall-panel installation in Room B was complete by the end of 2026-10-19."
+  },
+  {
+    "report_id": "SYN2-DR-003",
+    "project_id": "DEMO2-FICTIONAL",
+    "report_date": "2026-10-19",
+    "reported_by": "Synthetic field observer",
+    "location": "Corridor C",
+    "work_description": "Fictional fixture: exactly 4 workers performed insulation installation in Corridor C during the full day shift on 2026-10-19. This count refers to all workers on that scope for that shift.",
+    "labor_count": 4
+  },
+  {
+    "report_id": "SYN2-DR-004",
+    "project_id": "DEMO2-FICTIONAL",
+    "report_date": "2026-10-19",
+    "reported_by": "Synthetic field observer",
+    "location": "Area D",
+    "work_description": "Fictional fixture: PVC pipe was installed in Area D on 2026-10-19."
+  }
+]

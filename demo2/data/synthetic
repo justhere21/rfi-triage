@@ -1,0 +1,92 @@
+[
+  {
+    "id": "TC-01",
+    "project": "Willis ISD",
+    "topic": "Roof Steel Beams",
+    "description": "Check if we need more steel under the roof unit.",
+    "assignee": "Structural Engineer",
+    "status": "Closed",
+    "conflict": "None"
+  },
+  {
+    "id": "TC-02",
+    "project": "Lee-Whedon Library",
+    "topic": "Window Glass Type",
+    "description": "Fix the wrong glass type listed in th plans.",
+    "assignee": "Lead Architect",
+    "status": "Closed",
+    "conflict": "Document Mismatch"
+  },
+  {
+    "id": "TC-03",
+    "project": "Willis ISD",
+    "topic": "Fire Alarm Box",
+    "description": "Move the fire alarm box to a safer spot.",
+    "assignee": "Electrical Engineer",
+    "status": "Closed",
+    "conflict": "Safety Rule Issue"
+  },
+  {
+    "id": "TC-04",
+    "project": "Lee-Whedon Library",
+    "topic": "Drain Pipe Swap",
+    "description": "Builder asked to change pipe material due to delays",
+    "assignee": "Civil Engineer",
+    "status": "Rejected",
+    "conflict": "Unauthorize Change"
+  },
+  {
+    "id": "TC-05",
+    "project": "Willis ISD",
+    "topic": "Ceiling Pipe Clash",
+    "description": "Pipes are too low, so the ceilling must be lowered.",
+    "assignee": "Design Coordinator",
+    "status": "Closed",
+    "conflict": "Space Clash"
+  },
+  {
+    "id": "TC-06",
+    "project": "Lee-Whedon Library",
+    "topic": "Brick Glue Color",
+    "description": "Check and approve the color sample for brick.",
+    "assignee": "Lead Architect",
+    "status": "Closed",
+    "conflict": "None"
+  },
+  {
+    "id": "TC-07",
+    "project": "Willis ISD",
+    "topic": "Emergency Lights",
+    "description": "Make sure emergency lights connect to backup power.",
+    "assignee": "Electrical Engineer",
+    "status": "Closed",
+    "conflict": "None"
+  },
+  {
+    "id": "TC-08",
+    "project": "Lee-Whedon Library",
+    "topic": "Bathroom Wall Bars",
+    "description": "Check wall support rules for bathroom grab bars.",
+    "assignee": "Design Coordinator",
+    "status": "Closed",
+    "conflict": "Rule Compliance"
+  },
+  {
+    "id": "TC-09",
+    "project": "Willis ISD",
+    "topic": "Rain Drain Height",
+    "description": "Fix height mistakes in the rain drain plan.",
+    "assignee": "Civil Engineer",
+    "status": "In Review",
+    "conflict": "Height Mismatch"
+  },
+  {
+    "id": "TC-10",
+    "project": "Willis ISD",
+    "topic": "Wall Sound Panels",
+    "description": "Check wall strength for hanging sound panels.",
+    "assignee": "Lead Architect",
+    "status": "Closed",
+    "conflict": "None"
+  }
+]
