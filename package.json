@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "evaluate": "node src/runEvaluation.js"
+    "evaluate": "node demo2/src/runEvaluation.js",
+    "demo2:app": "node demo2/app/server.js",
+    "demo2:test": "node --test demo2/tests/pipeline.test.js"
   },
   "keywords": [],
   "author": "",

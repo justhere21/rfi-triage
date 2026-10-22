@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RFI Triage &amp; Status Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>RFI Triage &amp; Status Tracker</h1>
+    <label class="upload">
+      <input id="upload" type="file" accept=".json,application/json" multiple>
+      <span>Upload RFIs</span>
+    </label>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button role="tab" data-tab="All" class="active">All RFIs <span class="count"></span></button>
+    <button role="tab" data-tab="Pending Review">Pending Review <span class="count"></span></button>
+    <button role="tab" data-tab="Conflict Flagged">Conflict Flagged <span class="count"></span></button>
+    <button role="tab" data-tab="Approved">Approved <span class="count"></span></button>
+  </nav>
+
+  <p id="notice" class="notice" hidden></p>
+
+  <main class="layout">
+    <aside class="list">
+      <ul id="rfi-list"></ul>
+      <p id="empty" class="muted">No RFIs yet. Upload a JSON file with one RFI, an array of RFIs, or <code>{ "rfis": [...], "daily_reports": [...] }</code>.</p>
+    </aside>
+
+    <section id="detail" class="detail" hidden>
+      <div class="panel left">
+        <h2>RFI Info</h2>
+        <dl id="rfi-info" class="info"></dl>
+        <h3>Question</h3>
+        <p id="rfi-question" class="question"></p>
+        <h3>Linked Daily Field Reports</h3>
+        <div id="reports"></div>
+        <h3>Validation</h3>
+        <div id="validation"></div>
+      </div>
+
+      <div class="panel right">
+        <h2>AI Gatekeeper</h2>
+        <div id="gatekeeper"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

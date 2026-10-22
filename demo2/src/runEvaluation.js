@@ -1,202 +1,61 @@
-import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
-import { GoogleGenAI } from "@google/genai";
-import Ajv from "ajv";
-import addFormats from "ajv-formats";
+import { PREPARED_DIR, loadDailyReportPool, processQueue } from "./pipeline.js";
 
-const DATA_DIR = "data/synthetic";
-const RESULTS_DIR = "results";
+const rfisPath = process.argv[2] ?? path.join(PREPARED_DIR, "rfis.json");
 
-
-const INPUT_SCHEMA = JSON.parse(
-  fs.readFileSync(new URL("../schemas/rfi_schema.json", import.meta.url), "utf8")
-);
-const OUTPUT_SCHEMA = JSON.parse(
-  fs.readFileSync(new URL("../schemas/triage_output_schema.json", import.meta.url), "utf8")
-);
-
-const promptTemplate = fs.readFileSync(
-  new URL("../prompts/triage_prompt.txt", import.meta.url),
-  "utf8"
-);
-
-const ajv = new Ajv({ allErrors: true, strict: false });
-addFormats(ajv);
-
-const validateInput = ajv.compile(INPUT_SCHEMA);
-const validateOutput = ajv.compile(OUTPUT_SCHEMA);
-
-function assertValidInput(item, source = "input") {
-  if (!validateInput(item)) {
-    throw new Error(
-      `Input validation failed for ${source}:\n` +
-        JSON.stringify(validateInput.errors, null, 2)
-    );
-  }
+function statusOf(record) {
+  if (record.status === "invalid") return "INVALID";
+  if (record.status === "error") return "ERROR";
+  if (record.evaluation.status === "no_answer_key") return "NO KEY";
+  return record.evaluation.passed ? "PASS" : "FAIL";
 }
 
-function assertValidOutput(output, source = "output") {
-  if (!validateOutput(output)) {
-    throw new Error(
-      `Output validation failed for ${source}:\n` +
-        JSON.stringify(validateOutput.errors, null, 2)
-    );
-  }
-}
+const list = (values = []) => (values.length ? values.join(", ") : "—");
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY
-});
-
-function renderPrompt({
-  rfi_id,
-  title,
-  description,
-  spec_section,
-  linked_daily_report_ids
-}) {
-  const rfiText = [
-    `Title: ${title}`,
-    spec_section ? `Spec Section: ${spec_section}` : null,
-    linked_daily_report_ids.length
-      ? `Related Daily Report IDs: ${linked_daily_report_ids.join(", ")}`
-      : null,
-    `Description: ${description}`
-  ]
-    .filter(Boolean)
-    .join("\n");
-
-  return promptTemplate
-    .replaceAll("{{item_id}}", rfi_id)
-    .replaceAll("{{rfi_text}}", rfiText);
-}
-
-async function triageRfi(rfi) {
-  const prompt = renderPrompt(rfi);
-
-  const response = await ai.models.generateContent({
-    model: process.env.GEMINI_MODEL,
-    contents: prompt,
-    config: {
-      responseMimeType: "application/json",
-      responseJsonSchema: OUTPUT_SCHEMA
+function printRow(record) {
+  const evaluation = record.evaluation ?? {};
+  console.log(
+    record.key.padEnd(16) +
+      statusOf(record).padEnd(10) +
+      (record.triage_result?.approval_status ?? "—").padEnd(20) +
+      list(evaluation.caught).padEnd(22) +
+      list(evaluation.missed).padEnd(22) +
+      list(evaluation.false_flags).padEnd(22) +
+      (evaluation.gate_violation ? "YES" : "—")
+  );
+  if (record.status === "invalid") {
+    for (const error of record.validation.errors) {
+      console.error(`  ↳ ${error.code} ${error.field}: ${error.message}`);
     }
-  });
-
-  const raw = response.text;
-  const result = JSON.parse(raw);
-
-  assertValidOutput(result, `LLM output for ${rfi.rfi_id}`);
-
-  if (result.rfi_id !== rfi.rfi_id) {
-    throw new Error(
-      `LLM output rfi_id "${result.rfi_id}" does not match input "${rfi.rfi_id}"`
-    );
   }
-
-  return {
-    raw,
-    result
-  };
-}
-
-function getScenarioFiles(dataDir) {
-  if (!fs.existsSync(dataDir)) {
-    throw new Error(`Scenario directory not found: ${dataDir}`);
-  }
-
-  return fs
-    .readdirSync(dataDir)
-    .filter((file) => file.endsWith(".json"))
-    .map((file) => path.join(dataDir, file));
-}
-
-function loadScenarios(filePath) {
-  const raw = fs.readFileSync(filePath, "utf8");
-  const data = JSON.parse(raw);
-
-  if (!Array.isArray(data)) {
-    throw new Error(`${filePath} must contain a JSON array of RFIs`);
-  }
-
-  return data;
+  if (record.error) console.error(`  ↳ ${record.error}`);
 }
 
 async function main() {
-  fs.mkdirSync(RESULTS_DIR, { recursive: true });
+  const rfis = JSON.parse(fs.readFileSync(rfisPath, "utf8"));
+  if (!Array.isArray(rfis)) throw new Error(`${rfisPath} must contain a JSON array of RFIs`);
 
-  const files = getScenarioFiles(DATA_DIR);
+  const header =
+    "RFI".padEnd(16) + "RESULT".padEnd(10) + "AI STATUS".padEnd(20) +
+    "CAUGHT".padEnd(22) + "MISSED".padEnd(22) + "FALSE FLAGS".padEnd(22) + "GATE VIOLATION";
+  console.log(header);
+  console.log("-".repeat(header.length));
 
-  if (files.length === 0) {
-    throw new Error(`No JSON scenario files found in ${DATA_DIR}`);
-  }
+  const records = await processQueue(rfis, { dailyReportPool: loadDailyReportPool() }, printRow);
 
-  let successCount = 0;
-  let errorCount = 0;
+  const count = (predicate) => records.filter(predicate).length;
+  console.log("\nSummary");
+  console.log("-------");
+  console.log(`RFIs processed:      ${records.length}`);
+  console.log(`Passed:              ${count((r) => r.evaluation?.passed)}`);
+  console.log(`With missed issues:  ${count((r) => r.evaluation?.missed?.length)}`);
+  console.log(`With false flags:    ${count((r) => r.evaluation?.false_flags?.length)}`);
+  console.log(`Gate violations:     ${count((r) => r.evaluation?.gate_violation)}`);
+  console.log(`Invalid input:       ${count((r) => r.status === "invalid")}`);
+  console.log(`Errors:              ${count((r) => r.status === "error")}`);
 
-  for (const filePath of files) {
-    const scenarios = loadScenarios(filePath);
-
-    for (const item of scenarios) {
-      try {
-        assertValidInput(item, `${filePath} [${item.rfi_id}]`);
-
-        // triageRfi validates the model output against OUTPUT_SCHEMA
-        const { raw, result } = await triageRfi(item);
-
-        const outputPath = path.join(
-          RESULTS_DIR,
-          `${result.rfi_id}_results.json`
-        );
-
-        fs.writeFileSync(
-          outputPath,
-          JSON.stringify(
-            {
-              input_file: filePath,
-              status: "success",
-              raw_model_output: raw,
-              triage_result: result
-            },
-            null,
-            2
-          ) + "\n"
-        );
-
-        successCount++;
-        console.log(`Success: ${result.rfi_id}`);
-      } catch (error) {
-        errorCount++;
-
-        const fallbackId = item?.rfi_id ?? "unknown_item";
-        const outputPath = path.join(
-          RESULTS_DIR,
-          `${fallbackId}_results.json`
-        );
-
-        fs.writeFileSync(
-          outputPath,
-          JSON.stringify(
-            {
-              input_file: filePath,
-              status: "error",
-              error: error.message
-            },
-            null,
-            2
-          ) + "\n"
-        );
-
-        console.error(`Failed: ${fallbackId}`);
-        console.error(error.message);
-      }
-    }
-  }
-
-  console.log(`\nEvaluation complete.`);
-  console.log(`Successful: ${successCount}`);
-  console.log(`Failed: ${errorCount}`);
+  if (records.some((r) => !r.evaluation?.passed)) process.exitCode = 1;
 }
 
 main();
