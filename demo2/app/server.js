@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import {
   addDailyReports, displayStatus, getRecord, listRecords, loadDailyReportPool,
   processRfi, queueRfi, recordDecision, recordKey
-} from "../pipeline.js/pipeline.js";
+} from "../src/pipeline.js";
 
 const PUBLIC_DIR = fileURLToPath(new URL("./public/", import.meta.url));
 const PORT = Number(process.env.PORT ?? 3000);
