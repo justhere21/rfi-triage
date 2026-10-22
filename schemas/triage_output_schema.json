@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TriageOutputSchema", "type": "object", "required": [
+    "rfi_id",
+    "current_assignee",
+    "approval_status",
+    "flagged_conflicts",
+    "recommended_action"
+  ],
+  "properties": {"rfi_id": {"type": "string", "description": "RFI ID that this status belongs to"
+    },
+    "current_assignee": {"type": "string", "enum": ["Subcontractor", "General Contractor", "Architect", "Engineer", "Owner"], "description": "team currently handle this RFI"
+    },
+    "approval_status": {"type": "string", "enum": ["Draft", "Pending Review", "Conflict Flagged", "Approved", "Rejected"], "description": "Current status of RFI"
+    },
+    "flagged_conflicts": {
+      "type": "array",
+      "items": {"type": "object", "required": [
+          "conflict_type",
+          "severity",
+          "details"
+        ],
+        "properties": {"conflict_type": {"type": "string", "enum": ["Labor Discrepancy", "Schedule Mismatch", "Scope Variance", "Cost Impact"]
+          },
+          "severity": {"type": "string", "enum": ["L", "M", "H"]
+          },
+          "details": {"type": "string", "description": "Explantion of the issue found"}
+        }
+      }, "description": "List of issues found when comparing RFI with daily logs"
+    },
+    "recommended_action": {"type": "string", "description": "Suggest next step from the AI"}}
+}

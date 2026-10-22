@@ -1,0 +1,14 @@
+{
+"item_id": "RFI-014",
+"item_type": "rfi",
+"provenance": "synthetic",
+"submitted_date": "2026-10-05",
+"submitted_by": "Jordan Lee, Mechanical Subcontractor",
+"discipline": "mechanical",
+"location": "Level 2, Corridor C-204",
+"question_text": "Drawing M-204 shows a 300 mm wide supply air duct passing through the corridor ceiling. Please confirm whether the duct insulation is included within the indicated 450 mm ceiling service zone. We propose maintaining the duct dimensions and installing the specified insulation within the available space. Please confirm this arrangement is acceptable.",
+"drawing_refs": ["M-204", "A-202"],
+"spec_refs": ["23 07 00"],
+"attachments": [],
+"related_item_ids": []
+}

@@ -1,0 +1,574 @@
+{
+  "summary": {
+    "total_rfis": 15,
+    "passed_rfis": 0,
+    "total_expected_issues": 32,
+    "total_caught_issues": 0,
+    "total_missed_issues": 32,
+    "total_false_flags": 0,
+    "percent_expected_issues_detected": 0,
+    "needs_response_correct": 0,
+    "needs_response_accuracy": 0,
+    "human_review_correct": 0,
+    "possible_duplicate_caught": 0,
+    "drawing_conflict_caught": 0,
+    "ready_cases_incorrectly_flagged": 0,
+    "by_label": {
+      "possible_conflict": {
+        "expected": 5,
+        "caught": 0,
+        "missed": 5,
+        "false_flags": 0
+      },
+      "needs_human_review": {
+        "expected": 11,
+        "caught": 0,
+        "missed": 11,
+        "false_flags": 0
+      },
+      "related_or_duplicate": {
+        "expected": 2,
+        "caught": 0,
+        "missed": 2,
+        "false_flags": 0
+      },
+      "incomplete": {
+        "expected": 6,
+        "caught": 0,
+        "missed": 6,
+        "false_flags": 0
+      },
+      "missing_location": {
+        "expected": 1,
+        "caught": 0,
+        "missed": 1,
+        "false_flags": 0
+      },
+      "missing_drawing_reference": {
+        "expected": 2,
+        "caught": 0,
+        "missed": 2,
+        "false_flags": 0
+      },
+      "unclear_question": {
+        "expected": 3,
+        "caught": 0,
+        "missed": 3,
+        "false_flags": 0
+      },
+      "missing_spec_reference": {
+        "expected": 1,
+        "caught": 0,
+        "missed": 1,
+        "false_flags": 0
+      },
+      "ready": {
+        "expected": 1,
+        "caught": 0,
+        "missed": 1,
+        "false_flags": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "item_id": "RFI-001",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-002",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "related_or_duplicate",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "related_or_duplicate",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-003",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "missing_location"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "missing_location"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-004",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "missing_drawing_reference",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "missing_drawing_reference",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-005",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "unclear_question",
+        "missing_spec_reference"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "unclear_question",
+        "missing_spec_reference"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-006",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "ready"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "ready"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": false,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-007",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-008",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "unclear_question",
+        "missing_drawing_reference"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "unclear_question",
+        "missing_drawing_reference"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-009",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-010",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-011",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-012",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "related_or_duplicate",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "related_or_duplicate",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-013",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "possible_conflict",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-014",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "incomplete",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "incomplete",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    },
+    {
+      "item_id": "RFI-015",
+      "passed": false,
+      "error": "runAgent() is not implemented yet.",
+      "expected_labels": [
+        "unclear_question",
+        "needs_human_review"
+      ],
+      "agent_flags": [],
+      "caught": [],
+      "missed": [
+        "unclear_question",
+        "needs_human_review"
+      ],
+      "false_flags": [],
+      "schema_errors": [],
+      "needs_response": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      },
+      "respond_from": {
+        "evaluated": false,
+        "expected": null,
+        "actual": null,
+        "correct": true
+      },
+      "human_review_required": {
+        "expected": true,
+        "actual": null,
+        "correct": false
+      }
+    }
+  ]
+}

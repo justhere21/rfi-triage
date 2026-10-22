@@ -1,0 +1,21 @@
+{
+  "input_file": "data/synthetic/samples.json",
+  "status": "success",
+  "raw_model_output": "{\n  \"item_id\": \"RFI-015\",\n  \"item_type\": \"rfi\",\n  \"needs_response\": true,\n  \"respond_from\": \"Architect\",\n  \"due_by\": null,\n  \"contract_risk\": null,\n  \"risk_reason\": null,\n  \"flags\": [\n    \"drawing_conflict\",\n    \"needs_human_review\"\n  ],\n  \"duplicate_of\": null,\n  \"missing_information\": [],\n  \"human_review_required\": true\n}",
+  "triage_result": {
+    "item_id": "RFI-015",
+    "item_type": "rfi",
+    "needs_response": true,
+    "respond_from": "Architect",
+    "due_by": null,
+    "contract_risk": null,
+    "risk_reason": null,
+    "flags": [
+      "drawing_conflict",
+      "needs_human_review"
+    ],
+    "duplicate_of": null,
+    "missing_information": [],
+    "human_review_required": true
+  }
+}

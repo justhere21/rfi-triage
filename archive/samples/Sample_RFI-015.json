@@ -1,0 +1,14 @@
+{
+"item_id": "RFI-015",
+"item_type": "rfi",
+"provenance": "synthetic",
+"submitted_date": "2026-10-06",
+"submitted_by": "Casey Morgan, Electrical Contractor",
+"discipline": "electrical",
+"location": "Level 1, East Service Room E-112",
+"question_text": "Electrical drawing E-112 indicates two spare conduits terminating near the east wall, while architectural drawing A-112 shows millwork occupying the same general area. The drawings do not clearly establish whether the conduits should terminate behind the millwork or remain accessible within the service room. Please clarify the intended conduit termination locations and required access provisions. We have not proceeded with final conduit termination pending clarification.",
+"drawing_refs": ["E-112", "A-112"],
+"spec_refs": [],
+"attachments": [],
+"related_item_ids": []
+}

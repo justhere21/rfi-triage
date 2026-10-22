@@ -1,0 +1,25 @@
+{
+  "input_file": "data/synthetic/samples.json",
+  "status": "success",
+  "raw_model_output": "{\"item_id\":\"RFI-003\",\"item_type\":\"rfi\",\"needs_response\":true,\"respond_from\":\"Mechanical Engineer\",\"due_by\":null,\"contract_risk\":null,\"risk_reason\":null,\"flags\":[\"missing_information\",\"needs_human_review\"],\"duplicate_of\":null,\"missing_information\":[\"Specific location, level, or grid line\",\"Drawing reference\",\"Identification of the specific duct and cable tray\"],\"human_review_required\":true}",
+  "triage_result": {
+    "item_id": "RFI-003",
+    "item_type": "rfi",
+    "needs_response": true,
+    "respond_from": "Mechanical Engineer",
+    "due_by": null,
+    "contract_risk": null,
+    "risk_reason": null,
+    "flags": [
+      "missing_information",
+      "needs_human_review"
+    ],
+    "duplicate_of": null,
+    "missing_information": [
+      "Specific location, level, or grid line",
+      "Drawing reference",
+      "Identification of the specific duct and cable tray"
+    ],
+    "human_review_required": true
+  }
+}

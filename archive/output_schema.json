@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "required": [
+    "item_id",
+    "item_type",
+    "needs_response",
+    "respond_from",
+    "due_by",
+    "contract_risk",
+    "risk_reason",
+    "flags",
+    "duplicate_of",
+    "missing_information",
+    "human_review_required"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "item_id": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": ["rfi", "email", "meeting_minutes"]
+    },
+    "needs_response": {
+      "type": "boolean"
+    },
+    "respond_from": {
+      "type": ["string", "null"]
+    },
+    "due_by": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "contract_risk": {
+      "type": ["string", "null"],
+      "enum": ["low", "medium", "high", null]
+    },
+    "risk_reason": {
+      "type": ["string", "null"]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "missing_information",
+          "possible_duplicate",
+          "confirmed_duplicate",
+          "drawing_conflict",
+          "unverified_attachment",
+          "contract_risk",
+          "needs_human_review"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "duplicate_of": {
+      "type": ["string", "null"]
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "input_file": "data/synthetic/samples.json",
+  "status": "success",
+  "raw_model_output": "{\"item_id\":\"RFI-004\",\"item_type\":\"rfi\",\"needs_response\":true,\"respond_from\":\"Structural Engineer\",\"due_by\":null,\"contract_risk\":null,\"risk_reason\":null,\"flags\":[\"missing_information\",\"needs_human_review\"],\"duplicate_of\":null,\"missing_information\":[\"specific wall location\",\"drawing or plan reference\",\"supporting markup or photo of the marked location\"],\"human_review_required\":true}",
+  "triage_result": {
+    "item_id": "RFI-004",
+    "item_type": "rfi",
+    "needs_response": true,
+    "respond_from": "Structural Engineer",
+    "due_by": null,
+    "contract_risk": null,
+    "risk_reason": null,
+    "flags": [
+      "missing_information",
+      "needs_human_review"
+    ],
+    "duplicate_of": null,
+    "missing_information": [
+      "specific wall location",
+      "drawing or plan reference",
+      "supporting markup or photo of the marked location"
+    ],
+    "human_review_required": true
+  }
+}

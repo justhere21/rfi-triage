@@ -1,0 +1,14 @@
+{
+"item_id": "RFI-017",
+"item_type": "rfi",
+"provenance": "synthetic",
+"submitted_date": "2026-10-11",
+"submitted_by": "Riley Chen, Structural Steel Subcontractor",
+"discipline": "structural",
+"location": "Grid D-4, Level 3",
+"question_text": "Subject: Urgent Clarification of Mechanical Riser Opening at Structural Beam\n\nThe proposed mechanical riser opening conflicts with the beam shown on structural drawing S-304. Mechanical riser installation is scheduled to begin on 2026-10-13, and the opening location must be confirmed before fabrication and installation proceed. We propose shifting the opening approximately 150 mm east to avoid the identified conflict. Please have the structural engineer confirm whether this proposed shift is acceptable or provide an approved alternative. No structural approval has been received. Delayed clarification may affect the installation sequence and could result in rework if the opening is fabricated before the design is confirmed. Please respond before 2026-10-13 so that the affected work can proceed in accordance with the approved design.",
+"drawing_refs": ["S-304"],
+"spec_refs": [],
+"attachments": [],
+"related_item_ids": []
+}
